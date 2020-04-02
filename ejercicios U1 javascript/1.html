@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="../../resources/css/bootstrap.min.css" />
+</head>
+<body>
+    <p id='texto'>
+        Modificar a través de javascript el estilo de este texto cuando se presione el botón de abajo.
+        <br />
+        Cuando se presione el botón solicitar una confirmación al usuario para saber si éste se arrepiente del cambio y por lo tanto no se efectúa.
+        <br />
+        El texto debe quedar con la fuente "Comic Sans MS", tamaño 14px y rojo.
+    </p>
+    <div>
+        <button id="botonCambiaEstilos" onclick="cambiarEstilo()">Cambiar estilos</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    function cambiarEstilo(){
+        let div = document.getElementById('texto');
+        let n1=3
+        let n2=1
+        let cambiar = confirm("Estás seguro de cambiar?")
+        console.log(cambiar)
+        if (cambiar){
+        div.style.fontFamily = "Comic Sans MS, sans-serif"
+        div.style.fontSize = "14px"
+        div.style.color ="red"
+        }
+    }
+</script>
